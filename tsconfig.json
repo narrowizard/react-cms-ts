@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "rootDir": "src",
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "dva/dynamic": [
+                "src/types/dva/dynamic"
+            ],
+            "@models/*": [
+                "src/models/*"
+            ],
+            "@definitions/*": [
+                "src/definitions/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@services/*": [
+                "src/services/*"
+            ],
+            "@config/*": [
+                "src/config/*"
+            ],
+            "@themes/*": [
+                "src/themes/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ]
+        }
+    },
+    "include": [
+        "./src"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

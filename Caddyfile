@@ -1,0 +1,21 @@
+:80 {
+    root /srv
+    gzip
+    rewrite {
+        to {path} /
+    }
+    header / {
+        Cache-Control "no-store"
+    }
+    header /static {
+        Cache-Control "max-age=2592000"
+    }
+}
+
+:80/auth {
+    proxy /  http://proxy.narro.me/auth
+}
+
+:80/user {
+    proxy /  http://proxy.narro.me/user
+}

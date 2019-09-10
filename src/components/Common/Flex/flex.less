@@ -1,0 +1,53 @@
+:global {
+    .crc-flex {
+        display: flex;
+        width: 100%;
+
+        // 水平
+        &_layout__horizontal {
+            flex-direction: row;
+        }
+
+        // 垂直
+        &_layout__vertical {
+            flex-direction: column;
+        }
+
+        &_item {
+            // flex: 1;
+        }
+
+        &_flexItem {
+            flex: 1;
+        }
+
+        &_align__top {
+            align-items: flex-start;
+        }
+        &_align__middle {
+            align-items: center;
+        }
+        &_align__bottom {
+            align-items: flex-end;
+        }
+        &_justify__start {
+            justify-content: flex-start;
+        }
+        &_justify__center {
+            justify-content: center;
+        }
+        &_justify__end {
+            justify-content: flex-end;
+        }
+        &_justify__space-around {
+            justify-content: space-around;
+        }
+        &_justify__space-between {
+            justify-content: space-between;
+        }
+
+        &_hide {
+            display: none !important;
+        }
+    }
+}

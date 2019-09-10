@@ -1,0 +1,139 @@
+@import "../../themes/base.less";
+
+.main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    :global(.ant-layout-sider-zero-width-trigger) {
+        z-index: 100;
+    }
+
+    &.mobile {
+        :global {
+            .ant-layout-sider {
+                position: absolute;
+                left: 0;
+                height: 100vh;
+                top: 0;
+                z-index: 100;
+            }
+        }
+    }
+
+    .logo {
+        height: 32px;
+        background: rgba(255, 255, 255, .2);
+        margin: 16px;
+    }
+
+    .header {
+        background-color: #fff;
+        padding: 0 24px;
+
+        .userInfo {
+            float: right;
+            cursor: pointer;
+
+            .avatar {
+                background-color: @primary-color;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            .name {
+                vertical-align: middle;
+                display: inline-block;
+                font-size: 16px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .trigger {
+        font-size: 18px;
+        line-height: 64px;
+        padding: 0;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+
+    .content {
+        margin: 24px 16px;
+        padding: 24px;
+        background: #fff;
+        position: relative;
+        overflow: auto;
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(left, #fff, #e4e4e4);
+            border: 1px solid #aaa;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #fff;
+        }
+    }
+}
+
+.logoutWrapper {
+    :global(.ant-popover-inner-content) {
+        padding: 0;
+    }
+
+    .menu {
+        .item {
+            a {
+                display: block;
+                text-align: center;
+                padding: 8px 40px;
+                cursor: pointer;
+                color: @primary-color;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: lighten(@primary-color, 40%);
+            }
+        }
+    }
+}
+
+:global(.ant-layout-sider-children) {
+    overflow: auto;
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(28, 58, 148, 0.86);
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+    }
+
+}

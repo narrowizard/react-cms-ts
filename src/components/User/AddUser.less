@@ -1,0 +1,38 @@
+.submit {
+    width: 100%;
+}
+
+.form {
+    height: 100%;
+
+    .item {
+        margin: 20px 0;
+        width: 100%;
+
+        :global(.ant-select) {
+            width: 100%;
+        }
+
+        &.treeWrapper {
+            height: calc(100% - 200px);
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        .input,
+        button {
+            width: 100%;
+        }
+
+        .part {
+            display: inline-block;
+            vertical-align: top;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+    }
+}

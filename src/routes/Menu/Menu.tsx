@@ -4,7 +4,7 @@ import { MenuModel } from "@definitions/menu/menu";
 import { IState } from "@definitions/state";
 import { RootAction } from "@definitions/types";
 import actionCreators from "@models/actions/menu";
-import { Button, Divider, Drawer, Icon, message, Table, Tag } from "antd";
+import { Button, Divider, Drawer, Icon, message, Popconfirm, Table, Tag } from "antd";
 import { ColumnProps } from "antd/lib/table";
 import { connect } from "dva";
 import React from "react";
@@ -80,7 +80,7 @@ class Menu extends React.Component<IMenuProps, IMenuState> {
                         <Button type="link" size="small" onClick={() => { this.onAddSubMenu(item); }}>添加子菜单</Button>
                         <Divider type="vertical" />
                         <Button type="link" size="small" onClick={() => { this.onEditMenu(item); }}>编辑</Button>
-                        {/* <Popconfirm
+                        <Popconfirm
                             title={`确定要删除菜单"${item.Name}"吗?`}
                             okText="确定"
                             cancelText="取消"
@@ -88,8 +88,8 @@ class Menu extends React.Component<IMenuProps, IMenuState> {
                                 this.onDelete(item.ID);
                             }}
                         >
-                            <Button size="small" type="danger">删除菜单</Button>
-                        </Popconfirm> */}
+                            <Button size="small" type="link">删除菜单</Button>
+                        </Popconfirm>
                     </div>
                 );
             },

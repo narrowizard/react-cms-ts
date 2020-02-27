@@ -1,8 +1,8 @@
-import { DELETE_STATUS } from "@config/constant";
+
 import { IModel } from "@definitions/global";
 import { MenuListItem, MenuModel } from "@definitions/menu/menu";
 import { IMenu } from "@definitions/state";
-import { getModules, newModule, updateModule } from "@services/auth/menu";
+import { deleteModule, getModules, newModule, updateModule } from "@services/auth/menu";
 import { ListTree } from "@utils/tools";
 import { EffectsCommandMap } from "dva";
 import { AnyAction } from "redux";
@@ -36,10 +36,7 @@ const M: IModel & {
             }
         },
         *deleteMenu({ payload }: AnyAction, { call, put }: EffectsCommandMap) {
-            const p = new MenuModel();
-            p.Status = DELETE_STATUS.DELETED;
-            p.ID = payload.id;
-            const data = yield call(updateModule, p);
+            const data = yield call(deleteModule, payload.id);
             if (data) {
                 // TODO: 删除成功
             }

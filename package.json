@@ -59,7 +59,7 @@
     "echarts-for-react": "^2.0.15-beta.0",
     "file-loader": "^2.0.0",
     "husky": "^1.2.0",
-    "image-webpack-loader": "^4.5.0",
+    "image-webpack-loader": "^6.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "path-to-regexp": "^3.0.0",
